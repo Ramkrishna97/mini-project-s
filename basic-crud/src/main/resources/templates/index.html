@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Main container for the two-column layout -->
+<div class="container">
+
+    <!-- LEFT SIDE: Form Section -->
+    <section id="student-form-section">
+        <h2 class="form-header">Add Student</h2>
+        <form action="/save-student" method="post" id="studentForm">
+            Name: <input type="text" name="name" required><br>
+            Age: <input type="number" name="age" required><br>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+
+    <!-- RIGHT SIDE: Student Data Table -->
+    <section id="student-data-section">
+        <h1 class="page-header">Student Details</h1>
+        <table border="1" id="studentTable">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Use th:each here -->
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.age}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+</body>
+</html>
