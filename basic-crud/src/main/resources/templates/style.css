@@ -1,0 +1,75 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Page Header */
+.page-header {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Table Styling */
+#studentTable {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Makes borders clean and single-line */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#studentTable th {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Zebra striping for readability */
+#studentTable tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+#studentTable td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Form Styling */
+.form-header {
+    margin-top: 30px;
+    color: #555;
+}
+
+#studentForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Keeps the form contained */
+}
+
+#studentForm input[type="text"],
+#studentForm input[type="number"] {
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; /* Makes inputs stack nicely */
+}
+
+#studentForm button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#studentForm button[type="submit"]:hover {
+    background-color: #218838;
+}
