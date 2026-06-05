@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:is="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User 2 Chat</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chat-container { width: 500px; border: 1px solid #ccc; padding: 20px; }
+        .message {
+            border: 1px solid #ddd;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sent { background-color: #e0f7fa; }
+        .received { background-color: #fff3e0; }
+    </style>
+</head>
+<body>
+<h1>User 2 Chat Interface</h1>
+
+<!-- Send Message Form -->
+<form action="/send-message" method="post">
+    <input type="hidden" name="sender" value="user2"/>
+    <input type="hidden" name="receiver" value="user1"/>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea><br/>
+    <button type="submit">Send</button>
+</form>
+
+<!-- Messages Display -->
+<div class="chat-container">
+    <h2>Messages from User 1 (to User 2)</h2>
+    <div th:each="message : ${messages}" class="message received">
+        <span th:text="${message}"></span>
+    </div>
+</div>
+
+<!-- Navigation -->
+<a href="/user1">Go to User 1</a>
+</body>
+</html>
