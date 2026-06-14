@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f0f2f5; }
+    .container {
+      max-width: 440px; margin: 100px auto; background: #fff;
+      border-radius: 12px; padding: 40px; box-shadow: 0 2px 16px #0001;
+      text-align: center;
+    }
+    h1 { color: #1a1a2e; margin-bottom: 32px; }
+    button {
+      display: block; width: 100%; padding: 14px;
+      margin: 12px 0; font-size: 1rem; border: none;
+      border-radius: 8px; cursor: pointer; transition: background .2s;
+    }
+    .btn-u1 { background: #4f8ef7; color: #fff; }
+    .btn-u1:hover { background: #2563eb; }
+    .btn-u2 { background: #34a853; color: #fff; }
+    .btn-u2:hover { background: #188038; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>💬 Chat Application</h1>
+  <button class="btn-u1" onclick="location.href='/user1'">Enter as User 1</button>
+  <button class="btn-u2" onclick="location.href='/user2'">Enter as User 2</button>
+</div>
+</body>
+</html>
